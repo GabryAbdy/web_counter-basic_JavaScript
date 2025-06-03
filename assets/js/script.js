@@ -51,17 +51,23 @@ btnContainer.insertBefore(resetBtn, plusBtn);
 //Functionality
 let count = 0;
 
-plusBtn.onclick = function() {
+function increase() {
     count++;
     display.innerHTML = count;
 }
 
-minusBtn.onclick = function() {
+function decrease() {
     count--;
     display.innerHTML = count;
 }
 
-resetBtn.onclick = function() {
+function reset() {
     count = 0;
     display.innerHTML = count;
 }
+
+plusBtn.addEventListener("click", increase);
+
+minusBtn.addEventListener("click", decrease);
+
+resetBtn.addEventListener("click", reset);
